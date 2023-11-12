@@ -1,0 +1,324 @@
+﻿.flowraiz{
+    height: 100vh;
+}
+
+.flow{
+    height: 100%;
+    width: 100%;
+}
+
+.flowpop {
+    width: 272px;
+    position: absolute;
+    z-index: 1;
+    margin: 2px;
+    border-radius: 16px;
+    box-shadow: 2px 5px 9px -2px #484848;
+    display: none;
+    font-size: 12px;
+    cursor: move;
+    height: 495px;
+}
+
+.container{
+    display: flex;
+}
+
+.carregando{
+    display: flex;
+    justify-content: center;
+    height: 45em;
+}
+
+.carregando img{
+    width: 10%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.linkexterno{
+    color: #1d2d44;
+    text-decoration: none;
+}
+
+.aviso{
+    text-align: center;
+    margin-bottom: 2px;
+    font-style: italic;
+    opacity: 56%;
+}
+
+.lista{
+    width: 300px;
+    background: #1d2d44;
+    height: 100vh;
+    overflow-y: auto;
+    border-radius: 0 12px 12px 0;
+    position: absolute;
+}
+
+.iconefiltro{
+    cursor: pointer;
+}
+
+.filtros{
+    border-radius: 30px;
+    height: 40px;
+    padding: 8px;
+    margin: -5px 5px 8px;
+    background: white;
+    display: flex;
+}
+
+.filtros select{
+    min-width: 150px;
+    margin-left: 5px;
+    border: 0;
+}
+
+.filtros p{
+    font-size: 15px;
+    margin-top: 1px;
+    color: gray;
+    margin-left: 9px;
+}
+
+.containerfiltros{
+    display: block;
+}
+
+.caixapesquisa{
+    background: white;
+    border-radius: 30px;
+    height: 40px;
+    padding: 8px;
+    margin: 8px 5px;
+    display: flex;
+}
+
+.ferramentafiltro{
+    margin-top: 3px;
+}
+
+.containerfiltros input{
+    width: 238px;
+    margin: 0 5px;
+    border-radius: 23px;
+    height: 22px;
+    border: 0;
+    padding-left: 5px;
+}
+
+::-webkit-scrollbar{
+    width: 0px;
+    background: transparent;
+}
+
+.lista h1{
+    margin: 0;
+    margin-left: 5px;
+    margin-top: 5px;
+    font-size: 37px;
+    color: #f0ebd8;
+}
+
+.link{
+    text-decoration: none;
+    color: black;
+}
+
+.iconesacao:hover{
+    color: #f0ebd8;
+}
+
+.iconesacao{
+    font-size: 20px;
+    margin-right: 5px;
+    color: black;
+    color: #0d1321;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.menu{
+    font-size: 37px;
+    color: #f0ebd8;
+    font-size: 27px;
+    padding-bottom: 3px;
+    padding-right: 3px;
+}
+
+.elementos{
+    margin-top: 10px;
+}
+
+.elemento{
+    height: 40px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.356);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+}
+
+.novaatribuicao{
+    background: #d9d9d9;
+    padding: 6px;
+}
+
+.elemento p{
+    padding-top: 8px;
+    margin: 0 5px;
+    display: inline-block;
+    overflow: hidden !important;
+    width: fit-content;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    transition: transform 3.5s ease;
+    width: fit-content;
+    max-width: 220px;
+}
+
+.elemento p:hover{
+    max-width:742px;
+    right:0px;
+    text-overflow: clip;
+    transform: translateX(-30%);
+}
+
+.ferramentasadmin{
+    margin-top: 10px;
+}
+
+.conteudo{
+    width: 100%;
+    background: #3e567c;
+    overflow-y: auto;
+    height: 100vh;
+    padding-left: 300px;
+}
+
+.tabela{
+    width: 70%;
+    margin: 10px auto;
+    border-collapse: inherit;
+    background: #d9d9d9;
+}
+
+.tabela h1{
+    font-size: 24px;
+    text-align: center;
+    margin: 0;
+}
+
+.tabela tr, .tabela td{
+    border: 1px solid black;
+    padding: 5px;
+}
+
+.tabela .cabecalho{
+    background: rgb(184, 184, 184);
+    font-weight: bold;
+    text-align: center;
+}
+
+.tabela .titulo{
+    font-weight: bold;
+}
+
+.tabela input{
+    height: 25px;
+    width: 95%;
+    max-width: 48.8em;
+}
+
+.tabela select{
+    width: 100%;
+}
+
+.tabela a{
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.tabela ol, .tabela ul{
+    margin-bottom: 0;
+}
+
+.tabela p.semdado{
+    text-align: center;
+    color: red;
+    margin: 0;
+}
+
+.adicionar{
+    padding-left: 9px;
+}
+
+.adicionarprimeiro{
+    padding: 0;
+}
+
+.acoes{
+    display: flex;
+    justify-content: center;
+}
+
+.acoes button{
+    border: 0;
+    height: 40px;
+    width: 150px;
+    margin: 0 5px;
+    background: #b8b8b8;
+}
+
+.acoes button:hover{
+    background: #d6d6d6;
+    transition: 1s;
+}
+
+.itemadd{
+    display: none;
+}
+
+.tabela textarea{
+    width: -webkit-fill-available;
+    height: 12em;
+}
+
+div.itemadd{
+    padding-left: 2em;
+}
+
+@media print{
+    @page{
+        size: A4;
+        margin: 0 auto;
+    }
+
+    html, body{
+        width: 210mm;
+        height: 282mm;
+        font-size: 12px;
+    }
+
+    body{
+        padding-top: 15mm;
+    }
+
+    .lista{
+        display: none;
+    }
+
+    .conteudo{
+        width: 100%;
+    }
+
+    .tabela{
+        width: 80%;
+    }
+
+    tr{
+        -webkit-print-color-adjust: exact;
+    }
+}

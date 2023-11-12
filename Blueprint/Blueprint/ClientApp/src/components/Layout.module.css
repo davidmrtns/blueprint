@@ -1,0 +1,6 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap');
+
+* {
+    font-family: -apple-system, BlinkMacSystemFont, 'Ubuntu', 'Roboto', sans-serif;
+}

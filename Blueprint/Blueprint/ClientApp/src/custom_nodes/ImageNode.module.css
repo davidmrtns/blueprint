@@ -1,0 +1,25 @@
+﻿.text-updater-node{
+    height: 50px;
+    border: 1px solid #eee;
+    padding: 5px;
+    border-radius: 5px;
+    background: white;
+}
+
+.ocultarHandle{
+    opacity: 0;
+}
+
+.imagem{
+    width: 20vh;
+    padding: 0 5px;
+}
+
+.icon{
+    width: 9vh;
+}
+
+.titulo{
+    font-size: 12px;
+    margin-top: -3px;
+}

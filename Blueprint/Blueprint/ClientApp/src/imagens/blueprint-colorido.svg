@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Camada_2" data-name="Camada 2" xmlns="http://www.w3.org/2000/svg" width="431.159" height="431.159" viewBox="0 0 431.159 431.159">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #255ba7;
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #fff;
+        stroke-miterlimit: 10;
+        stroke-width: 5px;
+      }
+    </style>
+  </defs>
+  <g id="Camada_1-2" data-name="Camada 1">
+    <rect class="cls-1" width="431.159" height="431.159" rx="12" ry="12"/>
+    <g>
+      <rect class="cls-2" x="23.551" y="23.551" width="128.019" height="128.019"/>
+      <rect class="cls-2" x="151.57" y="23.551" width="128.019" height="128.019"/>
+      <rect class="cls-2" x="279.589" y="23.551" width="128.019" height="128.019"/>
+      <rect class="cls-2" x="23.551" y="151.57" width="128.019" height="128.019"/>
+      <rect class="cls-2" x="151.57" y="151.57" width="128.019" height="128.019"/>
+      <rect class="cls-2" x="279.589" y="151.57" width="128.019" height="128.019"/>
+      <rect class="cls-2" x="23.551" y="279.589" width="128.019" height="128.019"/>
+      <rect class="cls-2" x="151.57" y="279.589" width="128.019" height="128.019"/>
+      <rect class="cls-2" x="279.589" y="279.589" width="128.019" height="128.019"/>
+    </g>
+  </g>
+</svg>

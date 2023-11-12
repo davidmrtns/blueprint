@@ -1,0 +1,140 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Oleo+Script+Swash+Caps&display=swap');
+
+.cabecalho h1{
+    text-align: center;
+    color: white;
+    font-size: 45px;
+    margin: 0;
+    font-family: 'Montserrat';
+}
+
+.cabecalho{
+    margin: 15px;
+}
+
+.container{
+    background: #1d2d44;
+    margin-top: -16px;
+}
+
+.conta{
+    position: absolute;
+    padding: 35px 35px;
+    width: -webkit-fill-available;
+}
+
+.contaicone{
+    background: #748cab;
+    font-size: 30px;
+    text-align: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 50px;
+    cursor: pointer;
+    float: right;
+    color: white;
+}
+
+.contaicone:hover{
+    background: #3e5c76;
+    transition: 1s;
+}
+
+.opcoes{
+    display: none;
+    width: 45px;
+    text-align: center;
+    font-size: 14px;
+    float: right;
+    margin: 0;
+    color: white;
+}
+
+.opcoes ul{
+    list-style-type: none;
+    padding: 0;
+}
+
+.opcoes li{
+    display: inline;
+    float: left;
+    margin: 4px;
+}
+
+.containercards{
+    padding-bottom: 40px;
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 46px;
+}
+
+.card{
+    width: 272px;
+    margin: 5px;
+    border-radius: 16px;
+    box-shadow: 2px 5px 9px -2px #484848;
+    font-size: 12px;
+    cursor: pointer;
+    background: #d9d9d9;
+    color: #0d1321;
+}
+
+.card p{
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.card:hover{
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+
+.logoemp{
+    margin-left: auto;
+    margin-right: auto;
+    width: 15%;
+    display: block;
+    padding-top: 50px;
+    padding-bottom: 10px;
+    color: white;
+}
+
+.icone{
+    font-size: 104px !important;
+    margin: 0;
+    margin-top: 33px !important;
+}
+
+@media screen and (max-height: 562px){
+    .card {
+        height: 140px !important;
+    }
+
+    .icone {
+        font-size: 30px !important;
+        margin-top: 10px !important;
+    }
+
+    .logoemp{
+        width: 10%;
+    }
+
+    .containercards{
+        margin-top: 33px;
+    }
+}
+
+@media screen and (max-height: 720px){
+    .card {
+        height: 253px;
+    }
+}
+
+@media screen and (min-height: 620px){
+    .card {
+        height: 408px;
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "numero": 2,
+    "estabelecido": "nada",
+    "revisado": "nada",
+    "numeroRevisao": "0",
+    "nomeProcesso": "nada",
+    "setor": 1,
+    "responsavel": "nada",
+    "material": ["nada"],
+    "manuseio": ["nada"],
+    "pontosCriticos": ["nada"],
+    "resultado": ["nada"],
+    "acoesCorretivas": ["nada"],
+    "habilidades": ["nada"]
+}
+                

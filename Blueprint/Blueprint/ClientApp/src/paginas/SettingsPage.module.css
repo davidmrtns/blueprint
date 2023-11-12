@@ -1,0 +1,93 @@
+﻿.cabecalho{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid black;
+    margin: 0 35px;
+    padding: 14px 0;
+}
+
+.conteudo button{
+    border: 0;
+    height: 40px;
+    width: 150px;
+    margin: 0 5px;
+    background: #b8b8b8;
+}
+
+.conteudo button:hover{
+    background: #d6d6d6;
+    transition: 1s;
+}
+
+.dados{
+    width: fit-content;
+    text-align: left;
+    padding: 0 20px;
+}
+
+.dados h1{
+    margin: 0;
+}
+
+.dados p{
+    font-style: italic;
+    color: gray;
+}
+
+.novo{
+    text-align: center;
+}
+
+.icone{
+    width: fit-content;
+    padding: 0 20px;
+    display: flex;
+}
+
+.icone ul{
+    margin: 16px;
+}
+
+.icone li{
+    list-style-type: none;
+    cursor: pointer;
+}
+
+.contaicone{
+    background: #ed6c1a;
+    text-align: center;
+    width: 84px;
+    height: 84px;
+    border-radius: 50px;
+    cursor: pointer;
+    float: right;
+    color: white;
+    font-size: 68px;
+}
+
+.tabelaconteudo{
+    text-align: center;
+    margin: 0 auto;
+    width: 80%;
+    margin-top: 38px;
+}
+
+.tabelaconteudo thead{
+    background: #ffcb2e;
+}
+
+.tabelaconteudo td{
+    padding: 5px;
+}
+
+.tabelaconteudo tbody tr:nth-child(odd){
+    background: white;
+}
+
+.tabelaconteudo tbody tr:nth-child(even){
+    background: #ededed;
+}
+
+.opcoes{
+    padding: 20px 35px;
+}

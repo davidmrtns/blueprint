@@ -1,0 +1,31 @@
+﻿.container{
+    margin: 0;
+    margin-top: 30vh;
+    color: #f0ebd8;
+}
+
+.icone{
+    text-align: center;
+    font-size: 40px;
+    color: rgb(255, 46, 46);
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+.container h1{
+    margin: 0;
+    text-align: center;
+}
+
+.descricao{
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 0;
+}
+
+.descricaoerro{
+    text-align: center;
+    color: gray;
+    color: #f0ebd8;
+    font-style: italic;
+}

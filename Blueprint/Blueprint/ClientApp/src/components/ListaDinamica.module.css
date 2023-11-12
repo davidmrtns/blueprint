@@ -1,0 +1,15 @@
+﻿.listadinamica input{
+    height: 25px;
+    max-width: 48.8em;
+    width: 95%;
+}
+
+.novodado{
+    margin-bottom: 10px;
+    max-width: 100% !important;
+}
+
+.adicionar{
+    padding-left: 9px;
+    cursor: pointer;
+}

@@ -1,0 +1,55 @@
+{
+    "numero": 4,
+    "estabelecido": "14/09/2022",
+    "revisado": "13/10/2022",
+    "numeroRevisao": "1",
+    "nomeProcesso": "Atendimento no WhatsApp",
+    "setor": 1,
+    "responsavel": "Time comercial",
+    "material": 
+        [
+            "WhatsApp",
+            "BootConversa",
+            "Pipefy/AdvBox/CRM",
+            "Google Drive"
+        ],
+    "manuseio": 
+        [
+            "Jogar depoimentos",
+            "PJE aberto",
+            "AdvBox/Pipefy abertos",
+            "Deixar sempre a planilha de planejamento do produto jurídico aberta quando estiver falando com o cliente e ir consultando-a para colher insights",
+            "Atualizar AdvBox todas as vezes que falar com o cliente no menu PROCESSOS no campo ANDAMENTOS"
+        ],
+    "pontosCriticos":
+        [
+            "Atualizar (follow up) colocando as tags dos respectivos produtos em cada um dos clientes no Digisac/Serakides",
+            "Criar card de cadastro de lead no Pipefy/AdvBox/CRM",
+            "Colocar vencimento de 7 dias para voltar a entrar em contato com a lead",
+            "Perguntar se gostou do atendimento. Se sim, enviar link do Google para avaliação"
+        ],
+    "resultado": 
+        [
+            "Levar o cliente para a reunião de fechamento (deixar marcada)",
+            "30% dos leads irem a uma reunião de fechamento",
+            "Cliente sentir o profissionalismo",
+            "Ter um atendimento rápido das leads que chegam (menos de 10 minutos)"
+        ],
+    "acoesCorretivas": 
+        [
+            "Caso o cliente não vá ou remarque a reunião, enviar um vídeo de depoimento, oferecer novas três datas para ele escolher. Sempre damos segundas chance",
+            "Se o cliente parar de responder, enviar um vídeo de depoimento, e a seguinte mensagem: 'Olá Fulano, meu CRM me alertou da sua necessidade e eu gostaria de saber, em nome do respeito mútuo que há entre nós, se você tem interesse em CITAR O MELHOR BENEFÍCIO DO PRODUTO'", 
+            "Se o cliente apresentar objeções na reunião de fechamento, deixar aberta a planilha de planejamento do produto com a aba 'quebra de objeções' aberta",
+            "Caso o cliente não queira esperar o envio do contrato na reunião de fechamento, insistir uma vez dizendo que é rápido e que prefere fazer na presença dele para, caso haja alguma dúvida, já estar lá para resolver",
+            "Buscar jurisprudências e novidades jurídicas que justifiquem uma repescagem do contato"
+        ],
+    "habilidades": 
+        [
+            "Uma boa oratória, carisma, segurança ao falar",
+            "Perfil comportamental dominante e influente",
+            "Preferencialmente com mais de 30 anos",
+            "Deve ter bom computador, boa internet, um bom cenário e uma boa câmera",
+            "Não deve querer concurso, não deve querer advogar, deve querer ser comercial, gostar de vender"
+        ]
+}
+                

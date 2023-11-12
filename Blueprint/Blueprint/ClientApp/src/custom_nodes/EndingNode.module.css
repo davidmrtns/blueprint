@@ -1,0 +1,18 @@
+﻿.ocultarHandle{
+    opacity: 0;
+    top: 10px;
+}
+
+.circle{
+    position: relative;
+    height: 135px;
+    width: 135px;
+    line-height: 136px;
+    text-align: center;
+    font-size: 12px;
+}
+
+.inner{
+    fill: #d1d1d1;
+    stroke: #2c2c2c;
+}

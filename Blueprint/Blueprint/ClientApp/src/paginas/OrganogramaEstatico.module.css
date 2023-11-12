@@ -1,0 +1,27 @@
+﻿.organograma{
+    width: 85%;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.tabledep{
+    width: 200px;
+    font-size: 20px;
+    margin: 0 auto;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    min-width: 500px;
+    text-align: center;
+}
+
+.tabledep td{
+    padding: 5px;
+    color: white;
+}
+
+.cabecalho{
+    font-weight: bold;
+    color: black !important;
+}

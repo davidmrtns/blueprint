@@ -1,0 +1,40 @@
+﻿.corpo{
+    background: white;
+    border: 1px solid black;
+    border-radius: 4px;
+    width: 156px;
+}
+
+.titulo{
+    padding: 10px;
+    font-size: 12px;
+    margin: 0;
+}
+
+.popClick{
+    cursor: pointer;
+}
+
+.ocultarHandle{
+    opacity: 0;
+}
+
+.popIcon{
+    position: absolute;
+    transform: translate(-13vh, -4.8vh);
+    width: 6.3vh;
+}
+
+.imagem{
+    width: 7.5vh;
+    position: absolute;
+    padding: 0 5px;
+}
+
+.posPrim{
+    transform: translate(6.2vh, -4vh);
+}
+
+.posSec{
+    transform: translate(0.1vh, -4vh);
+}

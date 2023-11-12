@@ -1,0 +1,16 @@
+{
+    "numero": 1,
+    "estabelecido": "01/03/2023",
+    "revisado": "13/03/2023",
+    "numeroRevisao": "1",
+    "nomeProcesso": "Falar com cliente",
+    "setor": 1,
+    "responsavel": "Alana, Vitória",
+    "material": ["Digisac", "TecnoJuris", "RD Station"],
+    "manuseio": ["-"],
+    "pontosCriticos": ["-"],
+    "resultado": ["Cliente com dúvidas sanadas"],
+    "acoesCorretivas": ["-"],
+    "habilidades": ["-"]
+}
+                
