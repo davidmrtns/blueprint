@@ -31,7 +31,7 @@ namespace Blueprint.Classes
 
         /*public static string GerarOrganograma()
         {
-            MySqlConnection con = new MySqlConnection(Conexao.codConexao);
+            MySqlConnection con = new MySqlConnection(Conexao.CodConexao);
             var nodes = new List<Node>();
             var edges = new List<Edge>();
 
@@ -163,7 +163,7 @@ namespace Blueprint.Classes
 
         public static string GerarOrganograma()
         {
-            MySqlConnection con = new MySqlConnection(Conexao.codConexao);
+            MySqlConnection con = new MySqlConnection(Conexao.CodConexao);
             var nodes = new List<Node>();
             var temporaryNodes = new List<Node>();
             var edges = new List<Edge>();

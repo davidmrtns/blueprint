@@ -22,7 +22,7 @@ namespace Blueprint.Classes
 
         public static List<PontoCritico> BuscarPontosCriticos(int numero)
         {
-            MySqlConnection con = new MySqlConnection(Conexao.codConexao);
+            MySqlConnection con = new MySqlConnection(Conexao.CodConexao);
             List<PontoCritico> pontos = new List<PontoCritico>();
 
             try
@@ -65,7 +65,7 @@ namespace Blueprint.Classes
 
         public static List<string> BuscarDescricaoPontosCriticos(int numero)
         {
-            MySqlConnection con = new MySqlConnection(Conexao.codConexao);
+            MySqlConnection con = new MySqlConnection(Conexao.CodConexao);
             List<string> pontosCriticos = new List<string>();
 
             try
@@ -101,7 +101,7 @@ namespace Blueprint.Classes
 
         public static bool AtualizarPontoCritico(int index, string novaDescricao)
         {
-            MySqlConnection con = new MySqlConnection(Conexao.codConexao);
+            MySqlConnection con = new MySqlConnection(Conexao.CodConexao);
 
             try
             {
@@ -206,7 +206,7 @@ namespace Blueprint.Classes
 
         public static bool ExcluirPontoCritico(int id)
         {
-            MySqlConnection con = new MySqlConnection(Conexao.codConexao);
+            MySqlConnection con = new MySqlConnection(Conexao.CodConexao);
 
             try
             {
@@ -228,7 +228,7 @@ namespace Blueprint.Classes
 
         public static bool ExcluirPontosCriticosAposOrdem(int pop, int ordem)
         {
-            MySqlConnection con = new MySqlConnection(Conexao.codConexao);
+            MySqlConnection con = new MySqlConnection(Conexao.CodConexao);
 
             try
             {
@@ -251,7 +251,7 @@ namespace Blueprint.Classes
 
         public bool InserirPontoCritico()
         {
-            MySqlConnection con = new MySqlConnection(Conexao.codConexao);
+            MySqlConnection con = new MySqlConnection(Conexao.CodConexao);
 
             try
             {
@@ -276,7 +276,7 @@ namespace Blueprint.Classes
 
         public static void ExcluirTodosPontosCriticos(int numPop)
         {
-            MySqlConnection con = new MySqlConnection(Conexao.codConexao);
+            MySqlConnection con = new MySqlConnection(Conexao.CodConexao);
 
             try
             {

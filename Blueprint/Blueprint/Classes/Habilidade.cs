@@ -22,7 +22,7 @@ namespace Blueprint.Classes
 
         public static List<Habilidade> BuscarHabilidades(int numero)
         {
-            MySqlConnection con = new MySqlConnection(Conexao.codConexao);
+            MySqlConnection con = new MySqlConnection(Conexao.CodConexao);
             List<Habilidade> habilidades = new List<Habilidade>();
 
             try
@@ -65,7 +65,7 @@ namespace Blueprint.Classes
 
         public static List<string> BuscarDescricaoHabilidades(int numero)
         {
-            MySqlConnection con = new MySqlConnection(Conexao.codConexao);
+            MySqlConnection con = new MySqlConnection(Conexao.CodConexao);
             List<string> habilidades = new List<string>();
 
             try
@@ -101,7 +101,7 @@ namespace Blueprint.Classes
 
         public static bool AtualizarHabilidade(int index, string novaDescricao)
         {
-            MySqlConnection con = new MySqlConnection(Conexao.codConexao);
+            MySqlConnection con = new MySqlConnection(Conexao.CodConexao);
 
             try
             {
@@ -206,7 +206,7 @@ namespace Blueprint.Classes
 
         public static bool ExcluirHablidade(int id)
         {
-            MySqlConnection con = new MySqlConnection(Conexao.codConexao);
+            MySqlConnection con = new MySqlConnection(Conexao.CodConexao);
 
             try
             {
@@ -228,7 +228,7 @@ namespace Blueprint.Classes
 
         public static bool ExcluirHabilidadesAposOrdem(int pop, int ordem)
         {
-            MySqlConnection con = new MySqlConnection(Conexao.codConexao);
+            MySqlConnection con = new MySqlConnection(Conexao.CodConexao);
 
             try
             {
@@ -251,7 +251,7 @@ namespace Blueprint.Classes
 
         public bool InserirHabilidade()
         {
-            MySqlConnection con = new MySqlConnection(Conexao.codConexao);
+            MySqlConnection con = new MySqlConnection(Conexao.CodConexao);
 
             try
             {
@@ -276,7 +276,7 @@ namespace Blueprint.Classes
 
         public static void ExcluirTodasHabilidades(int numPop)
         {
-            MySqlConnection con = new MySqlConnection(Conexao.codConexao);
+            MySqlConnection con = new MySqlConnection(Conexao.CodConexao);
 
             try
             {

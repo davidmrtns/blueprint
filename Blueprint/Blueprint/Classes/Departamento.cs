@@ -26,7 +26,7 @@ namespace Blueprint.Classes
         public static List<Departamento> GerarListaDepartamentos()
         {
             List<Departamento> departamentos = new List<Departamento>();
-            MySqlConnection con = new MySqlConnection(Conexao.codConexao);
+            MySqlConnection con = new MySqlConnection(Conexao.CodConexao);
 
             try
             {

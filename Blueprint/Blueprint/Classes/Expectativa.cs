@@ -21,7 +21,7 @@ namespace Blueprint.Classes
 
         public static List<Expectativa> BuscarExpectativas(int numero)
         {
-            MySqlConnection con = new MySqlConnection(Conexao.codConexao);
+            MySqlConnection con = new MySqlConnection(Conexao.CodConexao);
             List<Expectativa> expectativas = new List<Expectativa>();
 
             try
@@ -64,7 +64,7 @@ namespace Blueprint.Classes
 
         public static List<string> BuscarDescricaoExpectativas(int numero)
         {
-            MySqlConnection con = new MySqlConnection(Conexao.codConexao);
+            MySqlConnection con = new MySqlConnection(Conexao.CodConexao);
             List<string> expectativas = new List<string>();
 
             try
@@ -100,7 +100,7 @@ namespace Blueprint.Classes
 
         public static bool AtualizarExpectativa(int index, string novaDescricao)
         {
-            MySqlConnection con = new MySqlConnection(Conexao.codConexao);
+            MySqlConnection con = new MySqlConnection(Conexao.CodConexao);
 
             try
             {
@@ -205,7 +205,7 @@ namespace Blueprint.Classes
 
         public static bool ExcluirExpectativa(int id)
         {
-            MySqlConnection con = new MySqlConnection(Conexao.codConexao);
+            MySqlConnection con = new MySqlConnection(Conexao.CodConexao);
 
             try
             {
@@ -227,7 +227,7 @@ namespace Blueprint.Classes
 
         public static bool ExcluirExpectativasAposOrdem(int atribuicao, int ordem)
         {
-            MySqlConnection con = new MySqlConnection(Conexao.codConexao);
+            MySqlConnection con = new MySqlConnection(Conexao.CodConexao);
 
             try
             {
@@ -250,7 +250,7 @@ namespace Blueprint.Classes
 
         public bool InserirExpectativa()
         {
-            MySqlConnection con = new MySqlConnection(Conexao.codConexao);
+            MySqlConnection con = new MySqlConnection(Conexao.CodConexao);
 
             try
             {
@@ -275,7 +275,7 @@ namespace Blueprint.Classes
 
         public static void ExcluirTodasExpectativas(int numAtribuicao)
         {
-            MySqlConnection con = new MySqlConnection(Conexao.codConexao);
+            MySqlConnection con = new MySqlConnection(Conexao.CodConexao);
 
             try
             {

@@ -48,7 +48,7 @@ namespace Blueprint.Classes
 
         public long AdicionarPop()
         {
-            MySqlConnection con = new MySqlConnection(Conexao.codConexao);
+            MySqlConnection con = new MySqlConnection(Conexao.CodConexao);
             long numTemp;
 
             try
@@ -81,7 +81,7 @@ namespace Blueprint.Classes
         public static Pop BuscarPop(int numero)
         {
             Pop pop = null;
-            MySqlConnection con = new MySqlConnection(Conexao.codConexao);
+            MySqlConnection con = new MySqlConnection(Conexao.CodConexao);
 
             try
             {
@@ -123,7 +123,7 @@ namespace Blueprint.Classes
         public static int BuscarNumPopPorAtividade(int numero)
         {
             int numPop = 0;
-            MySqlConnection con = new MySqlConnection(Conexao.codConexao);
+            MySqlConnection con = new MySqlConnection(Conexao.CodConexao);
 
             try
             {
@@ -161,7 +161,7 @@ namespace Blueprint.Classes
             List<Tuple<string, string>> listaString = new List<Tuple<string, string>>();
             List<Tuple<int, string>> listaInt = new List<Tuple<int, string>>();
 
-            MySqlConnection con = new MySqlConnection(Conexao.codConexao);
+            MySqlConnection con = new MySqlConnection(Conexao.CodConexao);
 
             if (popAntigo.Departamento != popNovo.Departamento)
             {
@@ -250,7 +250,7 @@ namespace Blueprint.Classes
             AcaoCorretiva.ExcluirTodasAcoesCorretivas(id);
             Habilidade.ExcluirTodasHabilidades(id);
 
-            MySqlConnection con = new MySqlConnection(Conexao.codConexao);
+            MySqlConnection con = new MySqlConnection(Conexao.CodConexao);
 
             try
             {
@@ -274,7 +274,7 @@ namespace Blueprint.Classes
 
         public static bool ExcluirPopPorAtividade(int atividade)
         {
-            MySqlConnection con = new MySqlConnection(Conexao.codConexao);
+            MySqlConnection con = new MySqlConnection(Conexao.CodConexao);
             int id = 0;
 
             try
@@ -314,7 +314,7 @@ namespace Blueprint.Classes
         public static bool ExcluirTodosPops(int numAtribuicao)
         {
             List<int> pops = new List<int>();
-            MySqlConnection con = new MySqlConnection(Conexao.codConexao);
+            MySqlConnection con = new MySqlConnection(Conexao.CodConexao);
 
             try
             {
@@ -351,7 +351,7 @@ namespace Blueprint.Classes
         public static List<Pop> GerarListaPops()
         {
             List<Pop> pops = new List<Pop>();
-            MySqlConnection con = new MySqlConnection(Conexao.codConexao);
+            MySqlConnection con = new MySqlConnection(Conexao.CodConexao);
 
             try
             {

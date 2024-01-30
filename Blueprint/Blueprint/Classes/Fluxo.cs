@@ -23,7 +23,7 @@ namespace Blueprint.Classes
         public static Fluxo BuscarFluxo(int id)
         {
             Fluxo fluxo = null;
-            MySqlConnection con = new MySqlConnection(Conexao.codConexao);
+            MySqlConnection con = new MySqlConnection(Conexao.CodConexao);
 
             try
             {
@@ -62,7 +62,7 @@ namespace Blueprint.Classes
         public static List<Fluxo> GerarListaFluxos()
         {
             List<Fluxo> fluxos = new List<Fluxo>();
-            MySqlConnection con = new MySqlConnection(Conexao.codConexao);
+            MySqlConnection con = new MySqlConnection(Conexao.CodConexao);
 
             try
             {

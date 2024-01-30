@@ -22,7 +22,7 @@ namespace Blueprint.Classes
 
         public static List<Manuseio> BuscarManuseios(int numero)
         {
-            MySqlConnection con = new MySqlConnection(Conexao.codConexao);
+            MySqlConnection con = new MySqlConnection(Conexao.CodConexao);
             List<Manuseio> manuseios = new List<Manuseio>();
 
             try
@@ -65,7 +65,7 @@ namespace Blueprint.Classes
 
         public static List<string> BuscarDescricaoManuseios(int numero)
         {
-            MySqlConnection con = new MySqlConnection(Conexao.codConexao);
+            MySqlConnection con = new MySqlConnection(Conexao.CodConexao);
             List<string> manuseios = new List<string>();
 
             try
@@ -101,7 +101,7 @@ namespace Blueprint.Classes
 
         public static bool AtualizarManuseio(int index, string novaDescricao)
         {
-            MySqlConnection con = new MySqlConnection(Conexao.codConexao);
+            MySqlConnection con = new MySqlConnection(Conexao.CodConexao);
 
             try
             {
@@ -206,7 +206,7 @@ namespace Blueprint.Classes
 
         public static bool ExcluirManuseio(int id)
         {
-            MySqlConnection con = new MySqlConnection(Conexao.codConexao);
+            MySqlConnection con = new MySqlConnection(Conexao.CodConexao);
 
             try
             {
@@ -228,7 +228,7 @@ namespace Blueprint.Classes
 
         public static bool ExcluirManuseiosAposOrdem(int pop, int ordem)
         {
-            MySqlConnection con = new MySqlConnection(Conexao.codConexao);
+            MySqlConnection con = new MySqlConnection(Conexao.CodConexao);
 
             try
             {
@@ -251,7 +251,7 @@ namespace Blueprint.Classes
 
         public bool InserirManuseio()
         {
-            MySqlConnection con = new MySqlConnection(Conexao.codConexao);
+            MySqlConnection con = new MySqlConnection(Conexao.CodConexao);
 
             try
             {
@@ -276,7 +276,7 @@ namespace Blueprint.Classes
 
         public static void ExcluirTodosManuseios(int numPop)
         {
-            MySqlConnection con = new MySqlConnection(Conexao.codConexao);
+            MySqlConnection con = new MySqlConnection(Conexao.CodConexao);
 
             try
             {

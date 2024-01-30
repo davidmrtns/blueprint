@@ -36,7 +36,7 @@ namespace Blueprint.Classes
         }
 
         public bool InserirUsuario() {
-            MySqlConnection con = new MySqlConnection(Conexao.codConexao);
+            MySqlConnection con = new MySqlConnection(Conexao.CodConexao);
 
             var sha = SHA256.Create();
             var asByteArray = Encoding.Default.GetBytes(Senha);
@@ -67,7 +67,7 @@ namespace Blueprint.Classes
         public static Usuario Autenticar(string nomeUsuario, string senha)
         {
             Usuario u = null;
-            MySqlConnection con = new MySqlConnection(Conexao.codConexao);
+            MySqlConnection con = new MySqlConnection(Conexao.CodConexao);
 
             var sha = SHA256.Create();
             var asByteArray = Encoding.UTF8.GetBytes(senha);
@@ -116,7 +116,7 @@ namespace Blueprint.Classes
         public static List<Usuario> GerarListaUsuarios()
         {
             List<Usuario> usuarios = new List<Usuario>();
-            MySqlConnection con = new MySqlConnection(Conexao.codConexao);
+            MySqlConnection con = new MySqlConnection(Conexao.CodConexao);
 
             try
             {

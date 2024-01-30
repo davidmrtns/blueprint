@@ -23,7 +23,7 @@ namespace Blueprint.Classes
 
         public static List<Atividade> BuscarAtividades(int numero)
         {
-            MySqlConnection con = new MySqlConnection(Conexao.codConexao);
+            MySqlConnection con = new MySqlConnection(Conexao.CodConexao);
             List<Atividade> atividades = new List<Atividade>();
 
             try
@@ -66,7 +66,7 @@ namespace Blueprint.Classes
 
         public static List<Atividade> BuscarTodasAtividades()
         {
-            MySqlConnection con = new MySqlConnection(Conexao.codConexao);
+            MySqlConnection con = new MySqlConnection(Conexao.CodConexao);
             List<Atividade> atividades = new List<Atividade>();
 
             try
@@ -109,7 +109,7 @@ namespace Blueprint.Classes
         public static string BuscarDescricaoAtividade(int numero)
         {
             string nome = null;
-            MySqlConnection con = new MySqlConnection(Conexao.codConexao);
+            MySqlConnection con = new MySqlConnection(Conexao.CodConexao);
 
             try
             {
@@ -140,7 +140,7 @@ namespace Blueprint.Classes
 
         public static List<string> BuscarDescricaoAtividades(int numero)
         {
-            MySqlConnection con = new MySqlConnection(Conexao.codConexao);
+            MySqlConnection con = new MySqlConnection(Conexao.CodConexao);
             List<string> atividades = new List<string>();
 
             try
@@ -176,7 +176,7 @@ namespace Blueprint.Classes
 
         public static List<Atividade> BuscarAtividadesSemPop(int numero)
         {
-            MySqlConnection con = new MySqlConnection(Conexao.codConexao);
+            MySqlConnection con = new MySqlConnection(Conexao.CodConexao);
             List<Atividade> atividades = new List<Atividade>();
 
             try
@@ -219,7 +219,7 @@ namespace Blueprint.Classes
 
         public static bool AtualizarAtividade(int index, string novaDescricao)
         {
-            MySqlConnection con = new MySqlConnection(Conexao.codConexao);
+            MySqlConnection con = new MySqlConnection(Conexao.CodConexao);
 
             try
             {
@@ -324,7 +324,7 @@ namespace Blueprint.Classes
 
         public static bool ExcluirAtividade(int id)
         {
-            MySqlConnection con = new MySqlConnection(Conexao.codConexao);
+            MySqlConnection con = new MySqlConnection(Conexao.CodConexao);
 
             try
             {
@@ -346,7 +346,7 @@ namespace Blueprint.Classes
 
         public static bool ExcluirAtividadesAposOrdem(int atribuicao, int ordem)
         {
-            MySqlConnection con = new MySqlConnection(Conexao.codConexao);
+            MySqlConnection con = new MySqlConnection(Conexao.CodConexao);
             List<int> atividadesExcluidas = new List<int>();
 
             try
@@ -394,7 +394,7 @@ namespace Blueprint.Classes
 
         public bool InserirAtividade()
         {
-            MySqlConnection con = new MySqlConnection(Conexao.codConexao);
+            MySqlConnection con = new MySqlConnection(Conexao.CodConexao);
 
             try
             {
@@ -419,7 +419,7 @@ namespace Blueprint.Classes
 
         public static void ExcluirTodasAtividade(int numAtribuicao)
         {
-            MySqlConnection con = new MySqlConnection(Conexao.codConexao);
+            MySqlConnection con = new MySqlConnection(Conexao.CodConexao);
 
             try
             {

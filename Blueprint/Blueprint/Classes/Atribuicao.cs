@@ -47,7 +47,7 @@ namespace Blueprint.Classes
 
         public long AdicionarAtribuicao()
         {
-            MySqlConnection con = new MySqlConnection(Conexao.codConexao);
+            MySqlConnection con = new MySqlConnection(Conexao.CodConexao);
             long numTemp;
 
             try
@@ -79,7 +79,7 @@ namespace Blueprint.Classes
         public static Atribuicao BuscarAtribuicao(int numero)
         {
             Atribuicao atribuicao = null;
-            MySqlConnection con = new MySqlConnection(Conexao.codConexao);
+            MySqlConnection con = new MySqlConnection(Conexao.CodConexao);
 
             try
             {
@@ -127,7 +127,7 @@ namespace Blueprint.Classes
         public static string BuscarResponsavelPop(int numero)
         {
             string cargo = null;
-            MySqlConnection con = new MySqlConnection(Conexao.codConexao);
+            MySqlConnection con = new MySqlConnection(Conexao.CodConexao);
 
             try
             {
@@ -162,7 +162,7 @@ namespace Blueprint.Classes
 
         public static bool ExcluirAtribuicao(int id)
         {
-            MySqlConnection con = new MySqlConnection(Conexao.codConexao);
+            MySqlConnection con = new MySqlConnection(Conexao.CodConexao);
 
             try
             {
@@ -190,7 +190,7 @@ namespace Blueprint.Classes
 
         private void BuscarExpectativas(Atribuicao atribuicao)
         {
-            MySqlConnection con = new MySqlConnection(Conexao.codConexao);
+            MySqlConnection con = new MySqlConnection(Conexao.CodConexao);
             List<string> expectativas = new List<string>();
 
             try
@@ -227,7 +227,7 @@ namespace Blueprint.Classes
         public static List<Atribuicao> GerarListaAtribuicoes()
         {
             List<Atribuicao> atribuicoes = new List<Atribuicao>();
-            MySqlConnection con = new MySqlConnection(Conexao.codConexao);
+            MySqlConnection con = new MySqlConnection(Conexao.CodConexao);
 
             try
             {
@@ -267,7 +267,7 @@ namespace Blueprint.Classes
         public static List<Atribuicao> ListarAtribuicoesPorDepartamento(int id)
         {
             List<Atribuicao> atribuicoes = new List<Atribuicao>();
-            MySqlConnection con = new MySqlConnection(Conexao.codConexao);
+            MySqlConnection con = new MySqlConnection(Conexao.CodConexao);
 
             try
             {
@@ -313,7 +313,7 @@ namespace Blueprint.Classes
             List<Tuple<string, string>> listaString = new List<Tuple<string, string>>();
             List<Tuple<int, string>> listaInt = new List<Tuple<int, string>>();
 
-            MySqlConnection con = new MySqlConnection(Conexao.codConexao);
+            MySqlConnection con = new MySqlConnection(Conexao.CodConexao);
 
             if (atribuicaoAntiga.Departamento != atribuicaoNova.Departamento)
             {
@@ -401,7 +401,7 @@ namespace Blueprint.Classes
         public static List<string> BuscarCargos()
         {
             List<string> cargos = new List<string>();
-            MySqlConnection con = new MySqlConnection(Conexao.codConexao);
+            MySqlConnection con = new MySqlConnection(Conexao.CodConexao);
 
             try
             {

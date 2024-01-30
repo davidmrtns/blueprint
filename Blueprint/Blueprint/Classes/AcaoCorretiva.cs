@@ -22,7 +22,7 @@ namespace Blueprint.Classes
 
         public static List<AcaoCorretiva> BuscarAcoesCorretivas(int numero)
         {
-            MySqlConnection con = new MySqlConnection(Conexao.codConexao);
+            MySqlConnection con = new MySqlConnection(Conexao.CodConexao);
             List<AcaoCorretiva> acoes = new List<AcaoCorretiva>();
 
             try
@@ -65,7 +65,7 @@ namespace Blueprint.Classes
 
         public static List<string> BuscarDescricaoAcoesCorretivas(int numero)
         {
-            MySqlConnection con = new MySqlConnection(Conexao.codConexao);
+            MySqlConnection con = new MySqlConnection(Conexao.CodConexao);
             List<string> acoesCorretivas = new List<string>();
 
             try
@@ -101,7 +101,7 @@ namespace Blueprint.Classes
 
         public static bool EditarAcoesCorretivas(List<string> antigo, string[] novo, int id)
         {
-            MySqlConnection con = new MySqlConnection(Conexao.codConexao);
+            MySqlConnection con = new MySqlConnection(Conexao.CodConexao);
             bool iguais = true;
 
             if (novo.Length != antigo.Count)
@@ -149,7 +149,7 @@ namespace Blueprint.Classes
 
         public static bool AtualizarAcaoCorretiva(int index, string novaDescricao)
         {
-            MySqlConnection con = new MySqlConnection(Conexao.codConexao);
+            MySqlConnection con = new MySqlConnection(Conexao.CodConexao);
 
             try
             {
@@ -254,7 +254,7 @@ namespace Blueprint.Classes
 
         public static bool ExcluirAcaoCorretiva(int id)
         {
-            MySqlConnection con = new MySqlConnection(Conexao.codConexao);
+            MySqlConnection con = new MySqlConnection(Conexao.CodConexao);
 
             try
             {
@@ -276,7 +276,7 @@ namespace Blueprint.Classes
 
         public static bool ExcluirAcoesCorretivasAposOrdem(int pop, int ordem)
         {
-            MySqlConnection con = new MySqlConnection(Conexao.codConexao);
+            MySqlConnection con = new MySqlConnection(Conexao.CodConexao);
 
             try
             {
@@ -299,7 +299,7 @@ namespace Blueprint.Classes
 
         public bool InserirAcaoCorretiva()
         {
-            MySqlConnection con = new MySqlConnection(Conexao.codConexao);
+            MySqlConnection con = new MySqlConnection(Conexao.CodConexao);
 
             try
             {
@@ -324,7 +324,7 @@ namespace Blueprint.Classes
 
         public static void ExcluirTodasAcoesCorretivas(int numPop)
         {
-            MySqlConnection con = new MySqlConnection(Conexao.codConexao);
+            MySqlConnection con = new MySqlConnection(Conexao.CodConexao);
 
             try
             {

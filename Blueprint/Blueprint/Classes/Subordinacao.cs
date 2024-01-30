@@ -19,7 +19,7 @@ namespace Blueprint.Classes
 
         public bool InserirSubordinacao()
         {
-            MySqlConnection con = new MySqlConnection(Conexao.codConexao);
+            MySqlConnection con = new MySqlConnection(Conexao.CodConexao);
 
             try
             {
@@ -45,7 +45,7 @@ namespace Blueprint.Classes
         public static List<Subordinacao> BuscarSubordinacoes(int id)
         {
             List<Subordinacao> subordinacoes = new List<Subordinacao>();
-            MySqlConnection con = new MySqlConnection(Conexao.codConexao);
+            MySqlConnection con = new MySqlConnection(Conexao.CodConexao);
 
             try
             {
@@ -99,7 +99,7 @@ namespace Blueprint.Classes
 
         public static void ExcluirSubordinacao(int id)
         {
-            MySqlConnection con = new MySqlConnection(Conexao.codConexao);
+            MySqlConnection con = new MySqlConnection(Conexao.CodConexao);
 
             try
             {
@@ -119,7 +119,7 @@ namespace Blueprint.Classes
 
         public static void ExcluirTodasSubordinacoes(int numAtribuicao)
         {
-            MySqlConnection con = new MySqlConnection(Conexao.codConexao);
+            MySqlConnection con = new MySqlConnection(Conexao.CodConexao);
 
             try
             {
