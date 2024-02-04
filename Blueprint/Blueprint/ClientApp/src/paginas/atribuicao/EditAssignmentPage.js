@@ -74,7 +74,7 @@ function EditAssignmentPage() {
                     });
                 }
             } catch (error) {
-                console.error('Error fetching data:', error);
+                console.error('Erro ao buscar dados: ', error);
                 setAutenticacao({
                     admin: null,
                     carregando: false

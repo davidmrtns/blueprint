@@ -4,15 +4,18 @@ using Blueprint.ViewModels;
 using System.Globalization;
 using System.Text.Json;
 using System.Linq;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Blueprint.Controllers
 {
+    [Authorize]
     [ApiController]
     [Route("[controller]")]
     public class ApiController : ControllerBase
     {
         /*ADICIONAR*/
 
+        [Authorize(Policy = "Admin")]
         [Route("adicionar-atribuicao")]
         [HttpPost]
         public IActionResult AdicionarAtribuicao([FromBody] AtribuicaoCompletaModel atribuicao)
@@ -57,6 +60,7 @@ namespace Blueprint.Controllers
             return Ok(resultado);
         }
 
+        [Authorize(Policy = "Admin")]
         [Route("adicionar-pop")]
         [HttpPost]
         public IActionResult AdicionarPop([FromBody] PopModel pop)
@@ -111,6 +115,21 @@ namespace Blueprint.Controllers
             return Ok(resultado);
         }
 
+        [Authorize(Policy = "Admin")]
+        [Route("inserir-usuario")]
+        [HttpPost]
+        public bool InserirUsuario([FromBody] NovoUsuarioModel usuario)
+        {
+            string nome = usuario.Nome;
+            string nomeUsuario = usuario.NomeUsuario;
+            string senha = usuario.Senha;
+            bool admin = usuario.Admin;
+
+            Usuario u = new Usuario(nomeUsuario, senha, nome, admin);
+
+            return u.InserirUsuario();
+        }
+
         /*LISTAR*/
 
         [HttpGet]
@@ -119,14 +138,7 @@ namespace Blueprint.Controllers
         {
             List<Atribuicao> atribuicoes = Atribuicao.GerarListaAtribuicoes();
 
-            if (atribuicoes != null)
-            {
-                return Ok(atribuicoes);
-            }
-            else
-            {
-                return NoContent();
-            }
+            return Ok(atribuicoes);
         }
 
         [HttpGet("listar-atribuicoes-departamento/{id}")]
@@ -150,15 +162,7 @@ namespace Blueprint.Controllers
         public IActionResult ListarPops()
         {
             List<Pop> pops = Pop.GerarListaPops();
-
-            if (pops != null)
-            {
-                return Ok(pops);
-            }
-            else
-            {
-                return NoContent();
-            }
+            return Ok(pops);
         }
 
         [HttpGet]
@@ -175,6 +179,28 @@ namespace Blueprint.Controllers
             {
                 return NoContent();
             }
+        }
+
+        [HttpGet]
+        [Route("listar-cargos")]
+        public string ListarCargos()
+        {
+            List<string> cargos = Atribuicao.BuscarCargos();
+            List<string> cargosJson = new List<string>();
+
+            if (cargos != null)
+            {
+                foreach (string cargo in cargos)
+                {
+                    cargosJson.Add(JsonSerializer.Serialize(cargo));
+                }
+            }
+            else
+            {
+                cargosJson = null;
+            }
+
+            return JsonSerializer.Serialize(cargosJson);
         }
 
         /*BUSCAR*/
@@ -549,6 +575,7 @@ namespace Blueprint.Controllers
 
         /*EXCLUIR*/
 
+        [Authorize(Policy = "Admin")]
         [HttpGet("excluir-pop/{id}")]
         [Route("excluir-pop")]
         public IActionResult ExcluirPop(int id)
@@ -556,6 +583,7 @@ namespace Blueprint.Controllers
             return Ok(Pop.ExcluirPop(id));
         }
 
+        [Authorize(Policy = "Admin")]
         [HttpGet("excluir-atribuicao/{id}")]
         [Route("excluir-atribuicao")]
         public IActionResult ExcluirAtribuicao(int id)
@@ -565,6 +593,7 @@ namespace Blueprint.Controllers
 
         /*EDITAR*/
 
+        [Authorize(Policy = "Admin")]
         [HttpGet("editar-pop")]
         [Route("editar-pop")]
         public IActionResult EditarPop([FromBody] PopModelEdicao pop)
@@ -617,6 +646,7 @@ namespace Blueprint.Controllers
             
         }
 
+        [Authorize(Policy = "Admin")]
         [Route("editar-atribuicao")]
         [HttpPost]
         public IActionResult Editar([FromBody] AtribuicaoCompletaModel atribuicao)
@@ -656,6 +686,7 @@ namespace Blueprint.Controllers
         }
 
         /*TESTE*/
+
         [HttpGet("organograma")]
         [Route("organograma")]
         public IActionResult GerarOrganograma()
@@ -672,7 +703,7 @@ namespace Blueprint.Controllers
             }
         }
 
-        /*CORRIGIR (usar IActionResult)*/
+        /* HELPERS */
 
         public bool InserirMateriais(string[] valores, int numFK)
         {
@@ -868,107 +899,6 @@ namespace Blueprint.Controllers
             {
                 return false;
             }
-        }
-
-        [HttpGet("buscar-cargo-responsavel/{id}")]
-        [Route("buscar-cargo-responsavel")]
-        public string CargoResponsavelPop(int id)
-        {
-            string cargo = Atribuicao.BuscarResponsavelPop(id);
-
-            return JsonSerializer.Serialize(cargo);
-        }
-
-        [HttpGet("excluir-material/{id}")]
-        [Route("excluir-material")]
-        public bool ExcluirMaterial(int id)
-        {
-            return Material.ExcluirMaterial(id);
-        }
-
-        [HttpGet("excluir-ponto-critico/{id}")]
-        [Route("excluir-ponto-critico")]
-        public bool ExcluirPontoCritico(int id)
-        {
-            return PontoCritico.ExcluirPontoCritico(id);
-        }
-
-        [HttpGet("excluir-manuseio/{id}")]
-        [Route("excluir-manuseio")]
-        public bool ExcluirManuseio(int id)
-        {
-            return Manuseio.ExcluirManuseio(id);
-        }
-
-        [HttpGet("excluir-resultado/{id}")]
-        [Route("excluir-resultado")]
-        public bool ExcluirResultado(int id)
-        {
-            return Resultado.ExcluirResultado(id);
-        }
-
-        [HttpGet("excluir-acao-corretiva/{id}")]
-        [Route("excluir-acao-corretiva")]
-        public bool ExcluirAcaoCorretiva(int id)
-        {
-            return AcaoCorretiva.ExcluirAcaoCorretiva(id);
-        }
-
-        [HttpGet("excluir-habilidade/{id}")]
-        [Route("excluir-habilidade")]
-        public bool ExcluirHabilidade(int id)
-        {
-            return Habilidade.ExcluirHablidade(id);
-        }
-
-        [HttpGet("excluir-atividade/{id}")]
-        [Route("excluir-atividade")]
-        public bool ExcluirAtividade(int id)
-        {
-            return Atividade.ExcluirAtividade(id);
-        }
-
-        [HttpGet("excluir-expectativa/{id}")]
-        [Route("excluir-expectativa")]
-        public bool ExcluirExpectativa(int id)
-        {
-            return Expectativa.ExcluirExpectativa(id);
-        }
-
-        [HttpGet]
-        [Route("listar-cargos")]
-        public string ListarCargos()
-        {
-            List<string> cargos = Atribuicao.BuscarCargos();
-            List<string> cargosJson = new List<string>();
-
-            if (cargos != null)
-            {
-                foreach (string cargo in cargos)
-                {
-                    cargosJson.Add(JsonSerializer.Serialize(cargo));
-                }
-            }
-            else
-            {
-                cargosJson = null;
-            }
-
-            return JsonSerializer.Serialize(cargosJson);
-        }
-
-        [Route("inserir-usuario")]
-        [HttpPost]
-        public bool InserirUsuario([FromBody] NovoUsuarioModel usuario)
-        {
-            string nome = usuario.Nome;
-            string nomeUsuario = usuario.NomeUsuario;
-            string senha = usuario.Senha;
-            bool admin = usuario.Admin;
-
-            Usuario u = new Usuario(nomeUsuario, senha, nome, admin);
-            
-            return u.InserirUsuario();
         }
     }
 }

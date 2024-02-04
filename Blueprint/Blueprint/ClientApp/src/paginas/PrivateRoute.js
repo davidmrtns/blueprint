@@ -15,7 +15,7 @@ function PrivateRoute() {
                 const logado = await backend.checarLogin();
                 setLogado(logado);
             } catch (error) {
-                console.error('Error fetching data:', error);
+                console.error('Erro ao buscar dados: ', error);
             }
         }
 

@@ -10,9 +10,11 @@ import { faGear } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useNavigate } from 'react-router-dom';
 import Recursos from '../classes/Recursos';
+import Backend from '../classes/Backend';
 
 function HomePage() {
     var recursos = new Recursos();
+    var backend = new Backend();
 
     let navigate = useNavigate();
     const routeFluxos = () => {
@@ -49,12 +51,7 @@ function HomePage() {
     }
 
     function desconectar() {
-        fetch('auth/desconectar', {
-            method: 'get',
-            headers: {
-                'Content-Type': 'application/json'
-            }
-        }).then(() => { window.location.href = "/home" });
+        backend.desconectar(); 
     }
 
     function configuracoes() {

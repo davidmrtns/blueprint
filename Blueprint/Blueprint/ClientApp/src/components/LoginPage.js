@@ -1,9 +1,11 @@
 ﻿import React, { Component, useState } from "react";
 import Recursos from "../classes/Recursos";
 import style from "./LoginPage.module.css";
+import Backend from "../classes/Backend";
 
 function LoginPage() {
     var recursos = new Recursos();
+    var backend = new Backend();
     const [enviado, setEnviado] = useState(null);
 
     function enviar(e) {
@@ -15,34 +17,12 @@ function LoginPage() {
     async function enviarSolicitacao() {
         setEnviado(true);
 
-        var resultado;
         var usuario = document.getElementById("usuario").value;
         var senha = document.getElementById("senha").value;
 
         if (usuario && senha) {
-            try {
-                await fetch('auth', {
-                    method: 'post',
-                    headers: {
-                        "Content-Type": "application/json"
-                    },
-                    body: JSON.stringify({
-                        username: usuario,
-                        password: senha
-                    })
-                }).then((response) => response.json())
-                    .then((data) => { resultado = data });
-
-                if (resultado) {
-                    window.location.href = "/home";
-                } else {
-                    alert('O usuário ou senha inseridos não existem');
-                    setEnviado(false);
-                }
-            } catch {
-                alert('Um erro ocorreu');
-                setEnviado(false);
-            }
+            var resultado = await backend.conectar(usuario, senha);
+            setEnviado(resultado);
         } else {
             alert('Digite um nome de usuário e senha válidos!');
             setEnviado(false);

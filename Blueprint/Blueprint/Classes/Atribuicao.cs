@@ -252,14 +252,13 @@ namespace Blueprint.Classes
                 }
                 else
                 {
-                    atribuicoes = null;
+                    atribuicoes.Clear();
                 }
                 con.Close();
             }
-            catch (Exception e)
+            catch
             {
-                Console.WriteLine(e.Message);
-                atribuicoes = null;
+                atribuicoes.Clear();
             }
             return atribuicoes;
         }

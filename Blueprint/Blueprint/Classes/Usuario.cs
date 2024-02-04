@@ -87,10 +87,9 @@ namespace Blueprint.Classes
                 {
                     while (leitor.Read())
                     {
-                        string usuarioBanco = leitor["nome_usuario"].ToString();
                         string senhaBanco = leitor["senha"].ToString();
 
-                        if (nomeUsuario.Equals(usuarioBanco) && senhaInformada == senhaBanco)
+                        if (senhaInformada == senhaBanco)
                         {
                             u = new Usuario(
                                 leitor["nome_usuario"].ToString(),

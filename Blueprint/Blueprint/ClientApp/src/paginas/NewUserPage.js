@@ -1,9 +1,10 @@
 ﻿import style from './NewUserPage.module.css';
 import { createRoot } from 'react-dom/client';
 import React, { useState, useEffect, Component } from "react";
+import Backend from '../classes/Backend';
 
 function NewUserPage() {
-    var admin;
+    var backend = new Backend();
     var uAdmin = false;
 
     function atualizarAdmin() {
@@ -11,24 +12,11 @@ function NewUserPage() {
     }
 
     async function cadastrarUsuario() {
-        var resposta;
-
         var nome = document.getElementById('nome').value.trim();
         var nomeUsuario = document.getElementById('nomeusuario').value.trim();
         var senha = document.getElementById('senha').value;
 
-        await fetch('api/inserir-usuario', {
-            method: 'post',
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({
-                nome: nome,
-                nomeUsuario: nomeUsuario,
-                senha: senha,
-                admin: uAdmin
-            })
-        }).then((response) => response.json()).then((data) => { resposta = data });
+        var resposta = await backend.inserirUsuario(nome, nomeUsuario, senha, uAdmin);
 
         if (resposta) {
             alert("Usuário inserido com sucesso");
@@ -38,18 +26,9 @@ function NewUserPage() {
     }
 
     async function checarAdmin() {
-        var resposta;
+        var resposta = await backend.checarAdmin();
 
-        await fetch('auth/admin', {
-            method: 'get',
-            headers: {
-                'Content-Type': 'application/json'
-            }
-        }).then((response) => response.json()).then((data) => { resposta = data });
-
-        admin = resposta;
-
-        if (admin) {
+        if (resposta) {
             renderizar();
         } else {
             const root = createRoot(document.getElementById("container-novo-usuario"));

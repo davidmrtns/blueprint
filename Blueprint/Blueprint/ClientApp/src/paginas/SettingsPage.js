@@ -5,18 +5,15 @@ import { faUser } from '@fortawesome/free-solid-svg-icons';
 import { faRightFromBracket } from '@fortawesome/free-solid-svg-icons';
 import { faHouse } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import Backend from '../classes/Backend';
 
 function SettingsPage() {
     var admin;
     var usuario;
+    var backend = new Backend();
 
     function desconectar() {
-        fetch('auth/desconectar', {
-            method: 'get',
-            headers: {
-                'Content-Type': 'application/json'
-            }
-        }).then(() => { window.location.href = "/home" });
+        backend.desconectar();
     }
 
     function voltar() {
@@ -24,17 +21,7 @@ function SettingsPage() {
     }
 
     async function validar() {
-        try {
-            await fetch('auth/usuario', {
-                method: 'get',
-                headers: {
-                    'Content-Type': 'application/json'
-                }
-            }).then((response) => response.json()).then((data) => { usuario = data });
-        } catch {
-            usuario = null;
-        }
-        
+        usuario = await backend.buscarUsuario();
 
         if (usuario) {
             admin = usuario.Admin;
@@ -48,15 +35,7 @@ function SettingsPage() {
     }
 
     async function buscarDepartamentos() {
-        var resposta;
-
-        await fetch('api/listar-departamentos', {
-            method: 'get',
-            headers: {
-                'Content-Type': 'application/json'
-            }
-        }).then((response) => response.json())
-            .then((data) => { resposta = data });
+        var resposta = await backend.listarDepartamentos();
 
         if (resposta) {
             const root = createRoot(document.getElementById("container-tabela-conteudo"));
@@ -93,16 +72,7 @@ function SettingsPage() {
     }
 
     async function buscarUsuarios() {
-        var resposta;
-
-        await fetch('auth/listar-usuarios', {
-            method: 'get',
-            headers: {
-                'Content-Type': 'application/json'
-            }
-        })
-            .then((response) => response.json())
-            .then((data) => { resposta = data });
+        var resposta = await backend.listarUsuarios();
 
         if (resposta) {
             const root = createRoot(document.getElementById("container-tabela-conteudo"));
