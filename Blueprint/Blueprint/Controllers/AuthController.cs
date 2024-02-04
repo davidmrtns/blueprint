@@ -2,9 +2,7 @@
 using Blueprint.Classes;
 using Blueprint.ViewModels;
 using System.Text.Json;
-using static Mysqlx.Expect.Open.Types.Condition.Types;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Http.Extensions;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Blueprint.Controllers
 {
@@ -15,14 +13,21 @@ namespace Blueprint.Controllers
         [HttpPost]
         public IActionResult Autenticar([FromBody] UsuarioModel usuario)
         {
-            string username = usuario.Username;
-            string password = usuario.Password;
-
-            Usuario u = Usuario.Autenticar(username, password);
+            Usuario u = Usuario.Autenticar(usuario.Username, usuario.Password);
 
             if (u != null)
             {
+                string token = Token.CriarToken(u.NomeUsuario, u.Nome, u.Admin);
+
                 HttpContext.Session.SetString("_LoggedUser", JsonSerializer.Serialize(u));
+                HttpContext.Response.Cookies.Append("Authorization", token, new CookieOptions
+                {
+                    Expires = DateTime.Now.AddHours(1),
+                    HttpOnly = true,
+                    Secure = true,
+                    IsEssential = true,
+                    SameSite = SameSiteMode.Strict
+                });
                 return Ok(true);
             }
             else
@@ -31,6 +36,7 @@ namespace Blueprint.Controllers
             }
         }
 
+        [Authorize]
         [HttpGet]
         [Route("validar")]
         public bool Validar()
@@ -56,6 +62,7 @@ namespace Blueprint.Controllers
             }
         }
 
+        [Authorize]
         [HttpGet]
         [Route("usuario")]
         public string BuscarUsuario()
@@ -74,6 +81,7 @@ namespace Blueprint.Controllers
             return u;
         }
 
+        [Authorize]
         [HttpGet]
         [Route("desconectar")]
         public bool Desconectar()
@@ -89,6 +97,7 @@ namespace Blueprint.Controllers
             }
         }
 
+        [Authorize]
         [HttpGet]
         [Route("admin")]
         public bool ChecarAdmin()
@@ -107,6 +116,7 @@ namespace Blueprint.Controllers
             return u.Admin;
         }
 
+        [Authorize(Policy = "Admin")]
         [HttpGet]
         [Route("listar-usuarios")]
         public string ListarUsuarios()

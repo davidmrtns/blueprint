@@ -377,13 +377,13 @@ namespace Blueprint.Classes
                 }
                 else
                 {
-                    pops = null;
+                    pops.Clear();
                 }
                 con.Close();
             }
             catch
             {
-                pops = null;
+                pops.Clear();
             }
             return pops;
         }

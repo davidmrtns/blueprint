@@ -121,7 +121,7 @@ class Backend {
             await fetch('api/buscar-atribuicao/' + id, {
                 method: 'get',
                 headers: {
-                    'Content-Type': 'application/json'
+                    "Content-Type": "application/json"
                 }
             }).then((response) => response.json()).then((data) => { resposta = data });
         } catch {
@@ -137,7 +137,7 @@ class Backend {
             await fetch('api/buscar-pop/' + id, {
                 method: 'get',
                 headers: {
-                    'Content-Type': 'application/json'
+                    "Content-Type": "application/json"
                 }
             }).then((response) => response.json()).then((data) => { resposta = data });
         } catch {
@@ -153,7 +153,7 @@ class Backend {
             await fetch('api/buscar-atividades/' + id, {
                 method: 'get',
                 headers: {
-                    'Content-Type': 'application/json'
+                    "Content-Type": "application/json"
                 }
             }).then((response) => response.json()).then((data) => { resposta = data });
         } catch {
@@ -169,7 +169,7 @@ class Backend {
             await fetch('api/buscar-todas-atividades/', {
                 method: 'get',
                 headers: {
-                    'Content-Type': 'application/json'
+                    "Content-Type": "application/json"
                 }
             }).then((response) => response.json()).then((data) => { resposta = data });
         } catch {
@@ -185,7 +185,7 @@ class Backend {
             await fetch('api/buscar-expectativas/' + id, {
                 method: 'get',
                 headers: {
-                    'Content-Type': 'application/json'
+                    "Content-Type": "application/json"
                 }
             }).then((response) => response.json()).then((data) => { resposta = data });
         } catch {
@@ -201,7 +201,7 @@ class Backend {
             await fetch('api/buscar-materiais/' + id, {
                 method: 'get',
                 headers: {
-                    'Content-Type': 'application/json'
+                    "Content-Type": "application/json"
                 }
             }).then((response) => response.json()).then((data) => { resposta = data });
         } catch {
@@ -217,7 +217,7 @@ class Backend {
             await fetch('api/buscar-pontos-criticos/' + id, {
                 method: 'get',
                 headers: {
-                    'Content-Type': 'application/json'
+                    "Content-Type": "application/json"
                 }
             }).then((response) => response.json()).then((data) => { resposta = data });
         } catch {
@@ -233,7 +233,7 @@ class Backend {
             await fetch('api/buscar-manuseios/' + id, {
                 method: 'get',
                 headers: {
-                    'Content-Type': 'application/json'
+                    "Content-Type": "application/json"
                 }
             }).then((response) => response.json()).then((data) => { resposta = data });
         } catch {
@@ -249,7 +249,7 @@ class Backend {
             await fetch('api/buscar-resultados/' + id, {
                 method: 'get',
                 headers: {
-                    'Content-Type': 'application/json'
+                    "Content-Type": "application/json"
                 }
             }).then((response) => response.json()).then((data) => { resposta = data });
         } catch {
@@ -265,7 +265,7 @@ class Backend {
             await fetch('api/buscar-acoes-corretivas/' + id, {
                 method: 'get',
                 headers: {
-                    'Content-Type': 'application/json'
+                    "Content-Type": "application/json"
                 }
             }).then((response) => response.json())
                 .then((data) => { resposta = data });
@@ -282,7 +282,7 @@ class Backend {
             await fetch('api/buscar-habilidades/' + id, {
                 method: 'get',
                 headers: {
-                    'Content-Type': 'application/json'
+                    "Content-Type": "application/json"
                 }
             }).then((response) => response.json()).then((data) => { resposta = data });
         } catch {
@@ -298,7 +298,7 @@ class Backend {
             await fetch('api/buscar-cargo-responsavel/' + id, {
                 method: 'get',
                 headers: {
-                    'Content-Type': 'application/json'
+                    "Content-Type": "application/json"
                 }
             }).then((response) => response.json()).then((data) => { resposta = data });
         } catch {
@@ -314,7 +314,7 @@ class Backend {
             await fetch('api/buscar-subordinacoes/' + id, {
                 method: 'get',
                 headers: {
-                    'Content-Type': 'application/json'
+                    "Content-Type": "application/json"
                 }
             }).then((response) => response.json()).then((data) => { resposta = data });
         } catch {
@@ -330,7 +330,7 @@ class Backend {
             await fetch('api/buscar-descricao-atividades/' + id, {
                 method: 'get',
                 headers: {
-                    'Content-Type': 'application/json'
+                    "Content-Type": "application/json"
                 }
             }).then((response) => response.json()).then((data) => { resposta = data });
         } catch {
@@ -346,7 +346,7 @@ class Backend {
             await fetch('api/buscar-descricao-atividade/' + id, {
                 method: 'get',
                 headers: {
-                    'Content-Type': 'application/json'
+                    "Content-Type": "application/json"
                 }
             }).then((response) => response.json()).then((data) => { resposta = data });
         } catch {
@@ -362,7 +362,7 @@ class Backend {
             await fetch('api/buscar-descricao-expectativas/' + id, {
                 method: 'get',
                 headers: {
-                    'Content-Type': 'application/json'
+                    "Content-Type": "application/json"
                 }
             }).then((response) => response.json()).then((data) => { resposta = data });
         } catch {
@@ -378,7 +378,7 @@ class Backend {
             await fetch('api/buscar-descricao-materiais/' + id, {
                 method: 'get',
                 headers: {
-                    'Content-Type': 'application/json'
+                    "Content-Type": "application/json"
                 }
             }).then((response) => response.json()).then((data) => { resposta = data });
         } catch {
@@ -394,7 +394,7 @@ class Backend {
             await fetch('api/buscar-descricao-pontos-criticos/' + id, {
                 method: 'get',
                 headers: {
-                    'Content-Type': 'application/json'
+                    "Content-Type": "application/json"
                 }
             }).then((response) => response.json()).then((data) => { resposta = data });
         } catch {
@@ -410,7 +410,7 @@ class Backend {
             await fetch('api/buscar-descricao-manuseios/' + id, {
                 method: 'get',
                 headers: {
-                    'Content-Type': 'application/json'
+                    "Content-Type": "application/json"
                 }
             }).then((response) => response.json()).then((data) => { resposta = data; });
         } catch {
@@ -426,7 +426,7 @@ class Backend {
             await fetch('api/buscar-descricao-resultados/' + id, {
                 method: 'get',
                 headers: {
-                    'Content-Type': 'application/json'
+                    "Content-Type": "application/json"
                 }
             }).then((response) => response.json()).then((data) => { resposta = data });
         } catch {
@@ -442,7 +442,7 @@ class Backend {
             await fetch('api/buscar-descricao-acoes-corretivas/' + id, {
                 method: 'get',
                 headers: {
-                    'Content-Type': 'application/json'
+                    "Content-Type": "application/json"
                 }
             }).then((response) => response.json()).then((data) => { resposta = data });
         } catch {
@@ -458,7 +458,7 @@ class Backend {
             await fetch('api/buscar-descricao-habilidades/' + id, {
                 method: 'get',
                 headers: {
-                    'Content-Type': 'application/json'
+                    "Content-Type": "application/json"
                 }
             }).then((response) => response.json())
                 .then((data) => { resposta = data });
@@ -474,7 +474,7 @@ class Backend {
         await fetch('api/listar-atribuicoes', {
             method: 'get',
             headers: {
-                'Content-Type': 'application/json'
+                "Content-Type": "application/json"
             }
         }).then((response) => response.json()).then((data) => { resposta = data });
 
@@ -487,7 +487,7 @@ class Backend {
             await fetch('api/listar-atribuicoes-departamento/' + id, {
                 method: 'get',
                 headers: {
-                    'Content-Type': 'application/json'
+                    "Content-Type": "application/json"
                 }
             }).then((response) => response.json()).then((data) => { resposta = data });
         } catch {
@@ -502,7 +502,7 @@ class Backend {
         await fetch('api/listar-pops', {
             method: 'get',
             headers: {
-                'Content-Type': 'application/json'
+                "Content-Type": "application/json"
             }
         }).then((response) => response.json()).then((data) => { resposta = data });
 
@@ -511,10 +511,11 @@ class Backend {
 
     async listarDepartamentos() {
         var resposta;
+
         await fetch('api/listar-departamentos', {
             method: 'get',
             headers: {
-                'Content-Type': 'application/json'
+                "Content-Type": "application/json"
             }
         }).then((response) => response.json()).then((data) => { resposta = data });
 
@@ -526,25 +527,9 @@ class Backend {
         await fetch('api/listar-cargos', {
             method: 'get',
             headers: {
-                'Content-Type': 'application/json'
+                "Content-Type": "application/json"
             }
         }).then((response) => response.json()).then((data) => { resposta = data });
-
-        return resposta;
-    }
-
-    async listarAtribuicoesDepartamento(id) {
-        var resposta;
-        try {
-            await fetch('api/listar-atribuicoes-departamento/' + id, {
-                method: 'get',
-                headers: {
-                    'Content-Type': 'application/json'
-                }
-            }).then((response) => response.json()).then((data) => { resposta = data });
-        } catch {
-            resposta = null;
-        }
 
         return resposta;
     }
@@ -554,7 +539,7 @@ class Backend {
         await fetch('api/buscar-num-pop-atividade/' + id, {
             method: 'get',
             headers: {
-                'Content-Type': 'application/json'
+                "Content-Type": "application/json"
             }
         }).then((response) => response.json()).then((data) => { resultado = data });
 
@@ -564,10 +549,10 @@ class Backend {
     async buscarAtividadesSemPop(id) {
         var resposta;
         try {
-            await fetch('api/buscar-atividades-sem-pop/' + id, {//id - pop.responsavel
+            await fetch('api/buscar-atividades-sem-pop/' + id, {
                 method: 'get',
                 headers: {
-                    'Content-Type': 'application/json'
+                    "Content-Type": "application/json"
                 }
             }).then((response) => response.json()).then((data) => { resposta = data });
         } catch {
@@ -582,7 +567,7 @@ class Backend {
         await fetch('api/excluir-atribuicao/' + id, {
             method: 'get',
             headers: {
-                'Content-Type': 'application/json'
+                "Content-Type": "application/json"
             }
         }).then((response) => response.json()).then((data) => { resposta = data });
 
@@ -594,6 +579,55 @@ class Backend {
         await fetch('api/excluir-pop/' + id, {
             method: 'get',
             headers: {
+                "Content-Type": "application/json"
+            }
+        }).then((response) => response.json()).then((data) => { resposta = data });
+
+        return resposta;
+    }
+
+    async inserirUsuario(nome, nomeUsuario, senha, admin) {
+        var resposta;
+
+        await fetch('api/inserir-usuario', {
+            method: 'post',
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                nome: nome,
+                nomeUsuario: nomeUsuario,
+                senha: senha,
+                admin: admin
+            })
+        }).then((response) => response.json()).then((data) => { resposta = data });
+
+        return resposta;
+    }
+
+    async buscarUsuario() {
+        var resposta;
+
+        try {
+            await fetch('auth/usuario', {
+                method: 'get',
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            }).then((response) => response.json()).then((data) => { resposta = data });
+        } catch {
+            resposta = null;
+        }
+
+        return resposta;
+    }
+
+    async listarUsuarios() {
+        var resposta;
+
+        await fetch('auth/listar-usuarios', {
+            method: 'get',
+            headers: {
                 'Content-Type': 'application/json'
             }
         }).then((response) => response.json()).then((data) => { resposta = data });
@@ -601,12 +635,39 @@ class Backend {
         return resposta;
     }
 
+    async conectar(usuario, senha) {
+        var resposta;
+        try {
+            await fetch('auth', {
+                method: 'post',
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    username: usuario,
+                    password: senha
+                })
+            }).then((response) => response.json())
+                .then((data) => { resposta = data });
+
+            if (resposta) {
+                window.location.href = "/home";
+            } else {
+                alert('O usuário ou senha inseridos não existem');
+                return false;
+            }
+        } catch {
+            alert('Um erro ocorreu');
+            return false;
+        }
+    }
+
     async checarAdmin() {
         var resposta;
         await fetch('auth/admin', {
             method: 'get',
             headers: {
-                'Content-Type': 'application/json'
+                "Content-Type": "application/json"
             }
         }).then((response) => response.json()).then((data) => { resposta = data });
 
@@ -618,11 +679,20 @@ class Backend {
         await fetch('auth/validar', {
             method: 'get',
             headers: {
-                'Content-Type': 'application/json'
+                "Content-Type": "application/json"
             }
         }).then((response) => response.json()).then((data) => { resposta = data });
 
         return resposta;
+    }
+
+    async desconectar() {
+        fetch('auth/desconectar', {
+            method: 'get',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        }).then(() => { window.location.href = "/home" });
     }
 
     async gerarOrganograma() {
