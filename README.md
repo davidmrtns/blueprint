@@ -1,6 +1,6 @@
 # <img src="/Blueprint/Blueprint/ClientApp/src/imagens/blueprint-colorido.svg" width="30px"> Blueprint
 ## Descrição do projeto
-O Blueprint é um software Web ASP.NET Core de gestão de Procedimentos Operacionais Padrão (POP) de cada função dos colaboradores de uma empresa.
+O Blueprint é um aplicativo web ASP.NET Core de gestão de Procedimentos Operacionais Padrão (POP) de cada função dos colaboradores de uma empresa.
 
 ## Entidades
 O Blueprint compreende dentro do seu escopo dois tipos de entidades: **Atribuição e POP**.
@@ -43,4 +43,4 @@ O projeto ainda não está completamente concluído.
 2. Geração de organograma baseado nas atribuições cadastradas
 
 ## Autores
-David Martins - Backend, Frontend e Banco de Dados
+David Martins - Backend, Frontend e Banco de dados
