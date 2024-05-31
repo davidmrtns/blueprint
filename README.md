@@ -1,4 +1,4 @@
-# <img src="/Blueprint/Blueprint/ClientApp/src/imagens/blueprint-colorido.svg" width="30px"> Blueprint
+# <img src="/Blueprint/ClientApp/src/imagens/blueprint-colorido.svg" width="30px"> Blueprint
 ## Descrição do projeto
 O Blueprint é um aplicativo web ASP.NET Core de gestão de Procedimentos Operacionais Padrão (POP) de cada função dos colaboradores de uma empresa.
 
