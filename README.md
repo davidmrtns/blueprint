@@ -1,46 +1,29 @@
 # <img src="/Blueprint/ClientApp/src/imagens/blueprint-colorido.svg" width="30px"> Blueprint
+
+![CSharp](https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=csharp&logoColor=white&style=for-the-badge)
+![DotNet](https://img.shields.io/badge/.NET-512BD4?style=for-the-badge&logo=dotnet&logoColor=white&style=for-the-badge)
+![JavaScript](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E&style=for-the-badge)
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB&style=for-the-badge)
+
 ## Descrição do projeto
-O Blueprint é um aplicativo web ASP.NET Core de gestão de Procedimentos Operacionais Padrão (POP) de cada função dos colaboradores de uma empresa.
+Blueprint é uma aplicação web desenvolvida com ASP.NET Core e React, focada na gestão de **Procedimentos Operacionais Padrão (POP)** e atribuições de cargos dentro de uma organização. O objetivo é centralizar e documentar as responsabilidades e processos de cada função, promovendo clareza e padronização nas operações internas.
 
-## Entidades
-O Blueprint compreende dentro do seu escopo dois tipos de entidades: **Atribuição e POP**.
-
-### Atribuição
-Uma atribuição é uma ficha que reúne informações da função de um colaborador, sendo elas:
-- Nome do cargo;
-- Departamento;
-- Unidade;
-- Jornada semanal;
-- Superior hierárquico;
-- Horário de trabalho (integral/meio-período);
-- Atividades;
-- Expectativas.
-
-### POP
-O POP (Procedimento Operacional Padrão) é uma ficha criada a partir de cada atividade de uma atribuição. Reúne informações sobre como desempenhar a atividade, sendo essas informações:
-- Data em que foi estabelecido;
-- Data de revisão;
-- Função responsável pela atividade;
-- Nome da operação;
-- Materiais necessários;
-- Passos críticos (passo a passo a ser seguido para desempenhar a tarefa);
-- Manuseio do material;
-- Resultado esperado;
-- Ações corretivas;
-- Habilidades esperadas.
+## Funcionalidades
+- 📄 **Gestão de atribuições**: criação e edição de fichas detalhadas para cada cargo, incluindo informações como departamento, jornada, atividades e expectativas;
+- 📝 **Gestão de POPs**: documentação passo a passo de procedimentos operacionais, com campos para materiais necessários, manuseio, ações corretivas e habilidades esperadas;
+- 🔗 **Vinculação entre atribuições e POPs**: cada atividade de uma atribuição pode ser detalhada em um POP correspondente, garantindo uma visão completa das responsabilidades.
 
 ## Desenvolvimento
-### Status do projeto
-O projeto ainda não está completamente concluído.
-
 ### Tecnologias utilizadas
-- Backend desenvolvido em C#;
-- Frontend desenvolvido com o framework React;
-- Banco de dados projetado em MySQL.
+- **Backend**: ASP.NET Core 8;
+- **Frontend**: React;
+- **Banco de dados**: MySQL.
 
 ### Roadmap
-1. Inclusão de fluxos
-2. Geração de organograma baseado nas atribuições cadastradas
+O projeto está em desenvolvimento ativo. As funcionalidades principais de gestão de atribuições e POPs estão implementadas. As próximas etapas incluem:
 
-## Autores
-David Martins - Backend, Frontend e Banco de dados
+1. Implementação de fluxogramas interativos para representar processos e caminhos operacionais;
+2. Desenvolvimento do módulo de geração de organograma dinâmico.
+
+## Autor
+- David Martins - [@davidmrtns](https://github.com/davidmrtns/)
